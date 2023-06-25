@@ -23,10 +23,17 @@ struct binary_tree_s
 };
 
 typedef struct binary_tree_s binary_tree_t;
-/*typedef struct binary_tree_s bst_t;
+typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
-*/
+
+struct queue_s
+{
+	binary_tree_t *child;
+	struct queue_s *next;
+};
+typedef struct queue_s queue_t;
+
 
 /*helper function from binary_tree_print*/
 void binary_tree_print(const binary_tree_t *);
